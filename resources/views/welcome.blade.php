@@ -8,14 +8,14 @@
         <div class="row">
             <div class="col-lg-7">
                 <h1 class="display-2 fw-bold text-white mb-3" style="line-height: 1;">
-                    LIMIT IS JUST AN <span style="color: var(--primary-red);">ILLUSION</span>
+                    KESEHATANMU BAGIAN DARI <span style="color: var(--primary-red);">KEBAHAGIAANMU</span>
                 </h1>
                 <p class="lead text-light mb-4 w-75">
-                    Platform monitoring performa olahraga #1. Pantau detak jantung, jarak lari, dan kalori secara real-time.
+                    Platform monitoring performa olahraga #1. Pantau detak jantung, jarak lari, kalori serta dapatkan rekomendasi asupan dan olahraga sehari-hari!
                 </p>
                 <div class="d-flex gap-3">
                     <a href="{{ route('register') }}" class="btn btn-red btn-lg">MULAI SEKARANG</a>
-                    <a href="#fitur" class="btn btn-outline-red btn-lg">PELAJARI</a>
+                    <a href="#fitur" class="btn btn-outline-secondary btn-lg rounded-pill px-5">PELAJARI</a>
                 </div>
             </div>
         </div>

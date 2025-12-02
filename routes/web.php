@@ -2,25 +2,31 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AuthController; // <--- PASTIKAN INI DI-IMPORT
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+*/
 
 // Halaman Depan
 Route::get('/', function () {
     return view('welcome');
 });
 
-// --- MENU UNTUK TAMU (Belum Login) ---
+// --- BAGIAN PENTING: TAMU (GUEST) ---
 Route::middleware('guest')->group(function () {
-    // Login
+    // 1. Login
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-    Route::post('/login', [AuthController::class, 'login']);
+    Route::post('/login', [AuthController::class, 'login']); // Route POST Login
 
-    // Register (Pastikan baris ini ada!)
+    // 2. Register (INI YANG HILANG SEBELUMNYA)
     Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
-    Route::post('/register', [AuthController::class, 'register']);
+    Route::post('/register', [AuthController::class, 'register']); // <--- TAMBAHKAN INI
 });
 
-// --- MENU UNTUK MEMBER (Sudah Login) ---
+// --- BAGIAN MEMBER (AUTH) ---
 Route::middleware('auth')->group(function () {
     // Logout
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
