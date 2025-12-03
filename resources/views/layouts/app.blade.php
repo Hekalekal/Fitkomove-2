@@ -111,7 +111,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fs-2" href="{{ url('/') }}">
+            <a class="navbar-brand fs-2 fw-bold fst-italic footer-brand" href="{{ url('/') }}">
                 <span style="color: white;">FIT</span><span style="color: var(--primary-red);">KOMOVE</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -135,7 +135,7 @@
     </main>
 
     <footer class="bg-black text-center py-4 border-top border-dark mt-auto">
-        <p class="mb-0 text-secondary">&copy; {{ date('Y') }} SportTracker Inc.</p>
+        <p class="mb-0 text-secondary">&copy; {{ date('Y') }} Fitkomove Inc.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

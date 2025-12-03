@@ -3,18 +3,26 @@
 @section('title', 'Fitkomove - Limit is Just an Illusion')
 
 @section('content')
-
-    <section class="hero-section d-flex align-items-center text-center text-lg-start" style="min-height: 100vh;">
+    <section class="hero-section d-flex align-items-center text-center text-lg-start" 
+        style="
+            min-height: 100vh; 
+            /* Lapisan Hitam Transparan (Kiri Gelap 95%, Kanan Agak Terang 75%) + Gambar */
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.65)), url('/images/angkat-beban.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+        ">
+        
         <div class="container position-relative z-2">
             <div class="row align-items-center">
                 <div class="col-lg-8">
                     <h1 class="display-1 fw-bold mb-3" style="font-family: 'Teko', sans-serif; line-height: 0.9;">
-                        LEVEL UP YOUR <br>
-                        <span style="color: var(--primary-red);">FITNESS GAME</span>
+                        KESEHATANMU BAGIAN DARI <br>
+                        <span style="color: var(--primary-red);">KEBAHAGIAANMU</span>
                     </h1>
                     <p class="lead mb-5 w-75 d-none d-lg-block" style="color: #ccc;">
                         Platform monitoring performa olahraga berbasis data presisi. 
-                        Analisis detak jantung, kalori, dan progres latihanmu dalam satu dashboard futuristik.
+                        Analisis progres latihanmu dan rekomendasi program kesehatan dalam satu dashboard futuristik.
                     </p>
                     <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
                         <a href="{{ route('register') }}" class="btn btn-red btn-lg px-5 py-3">MULAI SEKARANG</a>
@@ -24,9 +32,13 @@
             </div>
         </div>
         
+        <!-- Indikator Scroll -->
         <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 text-white animate-bounce">
             <i class="bi bi-mouse fs-3"></i>
-            <span class="d-block small">Scroll</span>
+        </div>
+    </section>
+        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 text-white animate-bounce">
+            <i class="bi bi-mouse fs-3"></i>
         </div>
     </section>
 
@@ -55,8 +67,8 @@
                 <div class="col-lg-6">
                     <div class="position-relative">
                         <div class="position-absolute top-0 start-0 w-100 h-100 border border-danger border-2" style="transform: translate(15px, 15px); z-index: -1;"></div>
-                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             class="img-fluid w-100 grayscale-img" alt="Trainer" style="filter: grayscale(100%); transition: 0.3s;">
+                        <img src="/images/lari-berdua-dua.jpg" 
+                             class="img-fluid w-100 grayscale-img" alt="Trainer" style="filter: grayscale(20%); transition: 0.3s;">
                     </div>
                 </div>
                 <div class="col-lg-6">
